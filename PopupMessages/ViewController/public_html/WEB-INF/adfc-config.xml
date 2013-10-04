@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-call id="popup-btf">
+    <task-flow-reference>
+      <document>/WEB-INF/popup-btf.xml</document>
+      <id>popup-btf</id>
+    </task-flow-reference>
+    <return-value id="__4">
+      <name>popupMessage</name>
+      <value>#{pageFlowScope.indexbean.popupMessage}</value>
+    </return-value>
+    <run-as-dialog>
+      <display-type>
+        <inline-popup/>
+      </display-type>
+    </run-as-dialog>
+  </task-flow-call>
+  <view id="index">
+    <page>/index.jsf</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>index</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>toPopup</from-outcome>
+      <to-activity-id>popup-btf</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__3">
+    <managed-bean-name>indexbean</managed-bean-name>
+    <managed-bean-class>view.IndexBean</managed-bean-class>
+    <managed-bean-scope>pageFlow</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

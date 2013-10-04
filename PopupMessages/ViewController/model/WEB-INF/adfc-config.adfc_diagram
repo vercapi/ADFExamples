@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <TaskFlowCall
+      id="TaskFlowCall2">
+      <property
+         name="taskFlowId">popup-btf</property>
+      <property
+         name="activityId">popup-btf</property>
+      <property
+         name="documentReference">/WEB-INF/popup-btf.xml</property>
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>popup-btf&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">169.44824</property>
+      <property
+         name="x">450.5</property>
+   </TaskFlowCall>
+   <View
+      id="View3">
+      <property
+         name="activityId">index</property>
+      <property
+         name="page">/index.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>index&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">178.29883</property>
+      <property
+         name="x">234.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View3"
+      to="TaskFlowCall2">
+      <property
+         name="fromOutcome">toPopup</property>
+      <property
+         name="sdm:polyPoints">R50,275.0,177.94824,409.5,169.09766,L50</property>
+   </ControlFlowCase>
+</SDM>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="popup-btf">
+    <default-activity>popupPage</default-activity>
+    <return-value-definition id="__4">
+      <name>popupMessage</name>
+      <value>#{pageFlowScope.popupbean.popupMessage}</value>
+      <class>view.PopupReturnMessage</class>
+    </return-value-definition>
+    <managed-bean id="__1">
+      <managed-bean-name>popupbean</managed-bean-name>
+      <managed-bean-class>view.PopupBean</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="popupPage">
+      <page>/popupPage.jsf</page>
+    </view>
+    <task-flow-return id="end">
+      <outcome>
+        <name>end</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__2">
+      <from-activity-id>popupPage</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>toEnd</from-outcome>
+        <to-activity-id>end</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>
