@@ -1,0 +1,33 @@
+#+TITLE: Exception Handling
+
+This example application is for figuring out how ADF handles different exceptions on a range of events.
+Investigate what needs to be done at minimum to ensure *all* exceptions are logged and a user friendly message is shown.
+And how and where we can intervene to display other, more functional messages to the user.
+
+The test results are from ADF 12.2.1.0.0 
+
+* Exception types
+
+  As stated in this [[https://blogs.oracle.com/jdevotnharvest/entry/displaying_exceptions_thrown_or_catched][OTN blog]] it is best to throw JboExceptions as these are handled best by the layers above.
+  
+** TODO JboException based exceptions
+** TODO Non JboException runtime exceptions
+** TODO Checked exceptions
+* Exceptions sources in bc
+  
+  The origin of exceptions thrown in business components can be roughly categorized as follows.
+  This doesn't affect behavior but there are different ways to intervene with the exceptions to get the best results.
+  
+** TODO PL/SQL calls
+** TODO Queries
+** TODO DML operations
+** TODO Java and APIs
+** TODO Services
+* Calls resulting in exceptions in faces
+
+  Depending on how you do your calls to the BC components it will change how and wether they are displayed by default
+
+** TODO Action on page
+** TODO ActionListener on page
+** TODO Method call in TaskFlow
+** TODO Operation binding in beans
