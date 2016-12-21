@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="AttributesPageDef"
+                Package="exceptions.exceptions_home_btf">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CountriesVOVI" RangeSize="25" DataControl="ExceptionAMDataControl" id="CountriesVOVIIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CountriesVOVIIterator" id="CountryName">
+      <AttrNames>
+        <Item Value="CountryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CountriesVOVIIterator" id="RegionId">
+      <AttrNames>
+        <Item Value="RegionId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

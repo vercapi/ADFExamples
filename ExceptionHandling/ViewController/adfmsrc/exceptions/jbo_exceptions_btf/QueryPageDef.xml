@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="QueryPageDef"
+                Package="exceptions.jbo_exceptions_btf">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesJboVOVI" RangeSize="25" DataControl="ExceptionAMDataControl"
+              id="EmployeesJboVOVIIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesJboVOVIIterator" id="EmployeesJboVOVI">
+      <nodeDefinition DefName="be.contribute.exceptionhandling.model.viewobjects.EmployeesJboVO"
+                      Name="EmployeesJboVOVI0">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="ExceptionType"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
