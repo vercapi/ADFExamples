@@ -1,5 +1,7 @@
 package be.contribute.exceptionhandling.model;
 
+import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.server.EntityDefImpl;
@@ -158,7 +160,8 @@ public class JobsImpl
 	 */
 	protected void create(AttributeList attributeList)
 	{
-		super.create(attributeList);
+		throw new CustomJboException("Could not create job!");
+		//super.create(attributeList);
 	}
 
 	/**
