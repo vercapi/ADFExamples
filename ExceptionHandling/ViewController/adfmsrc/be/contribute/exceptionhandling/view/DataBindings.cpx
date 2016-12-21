@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="be.contribute.exceptionhandling.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/home.jsf" usageId="be_contribute_exceptionhandling_view_homePageDef"/>
+    <page path="/WEB-INF/exceptions/jbo-exceptions-btf.xml#jbo-exceptions-btf@throwCustomJboException"
+          usageId="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_throwCustomJboExceptionPageDef"/>
+    <page path="/WEB-INF/exceptions/jbo-exceptions-btf.xml#jbo-exceptions-btf@CreateInsert"
+          usageId="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"/>
+    <page path="/home-btf/homeFragment.jsff" usageId="be_contribute_exceptionhandling_view_homeFragmentPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="be_contribute_exceptionhandling_view_homePageDef"
+          path="be.contribute.exceptionhandling.view.pageDefs.homePageDef"/>
+    <page id="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_throwCustomJboExceptionPageDef"
+          path="exceptions.jbo_exceptions_btf_jbo_exceptions_btf_throwCustomJboExceptionPageDef"/>
+    <page id="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"
+          path="exceptions.jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"/>
+    <page id="be_contribute_exceptionhandling_view_homeFragmentPageDef" path="home_btf.homeFragmentPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="ExceptionAMDataControl" Package="be.contribute.exceptionhandling.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="ExceptionAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

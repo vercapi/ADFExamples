@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="jbo-exceptions-btf">
+    <default-activity>jboMenu</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="jboMenu">
+      <page>/exceptions/jbo-exceptions-btf/jboMenu.jsff</page>
+    </view>
+    <view id="Query"></view>
+    <view id="Attributes"></view>
+    <method-call id="throwCustomJboException">
+      <method>#{bindings.throwCustomJboException.execute}</method>
+      <outcome>
+        <fixed-outcome>goSuccess</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>goSuccess</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="Success">
+      <page>/exceptions/jbo-exceptions-btf/Success.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>jboMenu</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>goQuery</from-outcome>
+        <to-activity-id>Query</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>goAttributes</from-outcome>
+        <to-activity-id>Attributes</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>goThrowJbo</from-outcome>
+        <to-activity-id>throwCustomJboException</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>goCreateInsert</from-outcome>
+        <to-activity-id>CreateInsert</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>Success</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>goMenu</from-outcome>
+        <to-activity-id>jboMenu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__10">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>goSuccess</from-outcome>
+        <to-activity-id>Success</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+   <af:panelGroupLayout id="pgl1" layout="vertical">
+      <af:outputLabel id="ol1" value="Execute query throws jbo exception"/>
+      <af:button id="b1" action="goQuery" text="Query"/>
+		
+      <af:outputLabel id="ol2" value="create throws jbo exception via method call"/>
+      <af:button id="b2" action="goCreateInsert" text="Create insert"/>
+		
+      <af:outputLabel id="ol3" value="Get attribute throws jbo exception"/>
+      <af:button id="b3" action="goAttributes" text="Attributes"/>
+		
+      <af:outputLabel id="ol4" value="AM client interface throws jbo exception"/>
+      <af:button id="b4" action="goThrowJbo" text="ThrowJbo"/>
+   </af:panelGroupLayout>
+</ui:composition>

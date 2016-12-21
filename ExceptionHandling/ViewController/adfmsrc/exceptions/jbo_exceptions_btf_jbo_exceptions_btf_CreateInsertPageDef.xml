@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef" Package="exceptions"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="JobsVOVI" RangeSize="25" DataControl="ExceptionAMDataControl" id="JobsVOVIIterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="JobsVOVIIterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>
