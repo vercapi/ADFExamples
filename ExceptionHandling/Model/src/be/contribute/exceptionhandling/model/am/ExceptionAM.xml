@@ -33,6 +33,9 @@
   <ViewUsage
     Name="EmployeesRTVOVI"
     ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.EmployeesRTVO"/>
+  <ViewUsage
+    Name="CountriesVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.CountriesVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

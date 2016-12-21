@@ -36,6 +36,13 @@
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="Countries"
+    Association="be.contribute.exceptionhandling.model.entities.CountrRegFkAssoc"
+    AssociationEnd="be.contribute.exceptionhandling.model.entities.CountrRegFkAssoc.Countries"
+    AssociationOtherEnd="be.contribute.exceptionhandling.model.entities.CountrRegFkAssoc.Regions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="RegIdPk"
     PrimaryKey="true">

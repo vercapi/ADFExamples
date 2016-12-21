@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -24,7 +25,8 @@ public class RegionsImpl
 	public enum AttributesEnum
 	{
 		RegionId,
-		RegionName;
+		RegionName,
+		Countries;
 		private static AttributesEnum[] vals = null;
 		private static final int firstIndex = 0;
 
@@ -52,14 +54,24 @@ public class RegionsImpl
 			return vals;
 		}
 	}
+
 	public static final int REGIONID = AttributesEnum.RegionId.index();
 	public static final int REGIONNAME = AttributesEnum.RegionName.index();
+	public static final int COUNTRIES = AttributesEnum.Countries.index();
 
 	/**
 	 * This is the default constructor (do not remove).
 	 */
 	public RegionsImpl()
 	{
+	}
+
+	/**
+	 * @return the definition object for this instance class.
+	 */
+	public static synchronized EntityDefImpl getDefinitionObject()
+	{
+		return EntityDefImpl.findDefObject("be.contribute.exceptionhandling.model.entities.Regions");
 	}
 
 	/**
@@ -99,6 +111,15 @@ public class RegionsImpl
 	}
 
 	/**
+	 * @return the associated entity oracle.jbo.RowIterator.
+	 */
+	public RowIterator getCountries()
+	{
+		return (RowIterator)getAttributeInternal(COUNTRIES);
+	}
+
+
+	/**
 	 * @param regionId key constituent
 
 	 * @return a Key object based on given key constituents.
@@ -106,14 +127,6 @@ public class RegionsImpl
 	public static Key createPrimaryKey(BigDecimal regionId)
 	{
 		return new Key(new Object[] { regionId });
-	}
-
-	/**
-	 * @return the definition object for this instance class.
-	 */
-	public static synchronized EntityDefImpl getDefinitionObject()
-	{
-		return EntityDefImpl.findDefObject("be.contribute.exceptionhandling.model.entities.Regions");
 	}
 
 	/**
