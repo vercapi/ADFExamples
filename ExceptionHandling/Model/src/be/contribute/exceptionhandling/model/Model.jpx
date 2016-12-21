@@ -12,16 +12,30 @@
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="hr"/>
-    <Attr Name="_appModuleNames0" Value="be.contribute.exceptionhandling.model.ExceptionAM"/>
+    <Attr Name="_appModuleNames0" Value="be.contribute.exceptionhandling.model.am.ExceptionAM"/>
   </DesignTime>
   <Containee
-    Name="model"
-    PackageName="be.contribute.exceptionhandling.model"
+    Name="am"
+    PackageName="be.contribute.exceptionhandling.model.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="entities"
+    PackageName="be.contribute.exceptionhandling.model.entities"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="viewobjects"
+    PackageName="be.contribute.exceptionhandling.model.viewobjects"
+    ObjectType="JboPackage">
+    <DesignTime>
       <Attr Name="_VO" Value="true"/>
-      <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
 </JboProject>

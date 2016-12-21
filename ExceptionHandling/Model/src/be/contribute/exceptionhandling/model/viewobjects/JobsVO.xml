@@ -12,8 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  RowClass="be.contribute.exceptionhandling.model.JobsVORowImpl"
-  ComponentClass="be.contribute.exceptionhandling.model.JobsVOImpl"
+  RowClass="be.contribute.exceptionhandling.model.viewobjects.JobsVORowImpl"
+  ComponentClass="be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl"
   PageIterMode="Full">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
@@ -22,12 +22,12 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="be.contribute.exceptionhandling.model.JobsVO_LABEL"/>
+        ResId="be.contribute.exceptionhandling.model.viewobjects.JobsVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <EntityUsage
     Name="Jobs"
-    Entity="be.contribute.exceptionhandling.model.Jobs"/>
+    Entity="be.contribute.exceptionhandling.model.entities.Jobs"/>
   <ViewAttribute
     Name="JobId"
     IsNotNull="true"

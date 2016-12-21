@@ -1,4 +1,4 @@
-package be.contribute.exceptionhandling.model;
+package be.contribute.exceptionhandling.model.entities;
 
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 
@@ -30,7 +30,7 @@ public class JobsImpl
 
 		public int index()
 		{
-			return AttributesEnum.firstIndex() + ordinal();
+			return JobsImpl.AttributesEnum.firstIndex() + ordinal();
 		}
 
 		public static final int firstIndex()
@@ -40,14 +40,14 @@ public class JobsImpl
 
 		public static int count()
 		{
-			return AttributesEnum.firstIndex() + AttributesEnum.staticValues().length;
+			return JobsImpl.AttributesEnum.firstIndex() + JobsImpl.AttributesEnum.staticValues().length;
 		}
 
 		public static final AttributesEnum[] staticValues()
 		{
 			if (vals == null)
 			{
-				vals = AttributesEnum.values();
+				vals = JobsImpl.AttributesEnum.values();
 			}
 			return vals;
 		}

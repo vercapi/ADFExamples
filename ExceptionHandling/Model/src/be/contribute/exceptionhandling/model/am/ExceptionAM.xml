@@ -6,7 +6,7 @@
   Name="ExceptionAM"
   Version="12.2.1.0.31"
   InheritPersonalization="merge"
-  ComponentClass="be.contribute.exceptionhandling.model.ExceptionAMImpl"
+  ComponentClass="be.contribute.exceptionhandling.model.am.ExceptionAMImpl"
   ClearCacheOnRollback="true">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
@@ -14,12 +14,12 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="be.contribute.exceptionhandling.model.ExceptionAM_LABEL"/>
+        ResId="be.contribute.exceptionhandling.model.am.ExceptionAM_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <ViewUsage
     Name="JobsVOVI"
-    ViewObjectName="be.contribute.exceptionhandling.model.JobsVO"/>
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.JobsVO"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="be.contribute.exceptionhandling.model.ModelBundle"/>

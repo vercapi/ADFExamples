@@ -1,5 +1,6 @@
-package be.contribute.exceptionhandling.model;
+package be.contribute.exceptionhandling.model.viewobjects;
 
+import be.contribute.exceptionhandling.model.entities.JobsImpl;
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 
 import oracle.jbo.server.ViewRowImpl;
@@ -34,7 +35,7 @@ public class JobsVORowImpl
 
 		public int index()
 		{
-			return AttributesEnum.firstIndex() + ordinal();
+			return JobsVORowImpl.AttributesEnum.firstIndex() + ordinal();
 		}
 
 		public static final int firstIndex()
@@ -44,14 +45,14 @@ public class JobsVORowImpl
 
 		public static int count()
 		{
-			return AttributesEnum.firstIndex() + AttributesEnum.staticValues().length;
+			return JobsVORowImpl.AttributesEnum.firstIndex() + JobsVORowImpl.AttributesEnum.staticValues().length;
 		}
 
 		public static final AttributesEnum[] staticValues()
 		{
 			if (vals == null)
 			{
-				vals = AttributesEnum.values();
+				vals = JobsVORowImpl.AttributesEnum.values();
 			}
 			return vals;
 		}

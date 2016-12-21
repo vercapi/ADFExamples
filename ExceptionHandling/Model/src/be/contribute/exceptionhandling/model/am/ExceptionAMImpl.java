@@ -1,4 +1,6 @@
-package be.contribute.exceptionhandling.model;
+package be.contribute.exceptionhandling.model.am;
+
+import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
 
 import oracle.jbo.server.ApplicationModuleImpl;
 // ---------------------------------------------------------------------
