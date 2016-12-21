@@ -3,6 +3,7 @@ package be.contribute.exceptionhandling.model.am;
 import be.contribute.exceptionhandling.model.am.common.ExceptionAM;
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 import be.contribute.exceptionhandling.model.exceptions.CustomRuntimeException;
+import be.contribute.exceptionhandling.model.viewobjects.JobHistoryVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.RegionsVOImpl;
 
@@ -50,6 +51,15 @@ public class ExceptionAMImpl
 	public RegionsVOImpl getRegionsVOVI()
 	{
 		return (RegionsVOImpl)findViewObject("RegionsVOVI");
+	}
+
+	/**
+	 * Container's getter for JobHistoryVO1.
+	 * @return JobHistoryVO1
+	 */
+	public JobHistoryVOImpl getJobHistoryVOVI()
+	{
+		return (JobHistoryVOImpl)findViewObject("JobHistoryVOVI");
 	}
 }
 

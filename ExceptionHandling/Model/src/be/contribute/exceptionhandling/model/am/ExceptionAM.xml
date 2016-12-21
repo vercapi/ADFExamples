@@ -24,6 +24,9 @@
   <ViewUsage
     Name="RegionsVOVI"
     ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.RegionsVO"/>
+  <ViewUsage
+    Name="JobHistoryVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.JobHistoryVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method
