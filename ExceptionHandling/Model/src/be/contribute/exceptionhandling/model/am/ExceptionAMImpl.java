@@ -2,7 +2,9 @@ package be.contribute.exceptionhandling.model.am;
 
 import be.contribute.exceptionhandling.model.am.common.ExceptionAM;
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
+import be.contribute.exceptionhandling.model.exceptions.CustomRuntimeException;
 import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
+import be.contribute.exceptionhandling.model.viewobjects.RegionsVOImpl;
 
 import oracle.jbo.server.ApplicationModuleImpl;
 // ---------------------------------------------------------------------
@@ -26,6 +28,11 @@ public class ExceptionAMImpl
 	{
 		throw new CustomJboException("Custom JBO exception by AM");
 	}
+	
+	public void throwCustomRuntimeException()
+	{
+		throw new CustomRuntimeException("Custom runtime exception by AM");
+	}
 
 	/**
 	 * Container's getter for JobsVOVI.
@@ -34,6 +41,15 @@ public class ExceptionAMImpl
 	public JobsVOImpl getJobsVOVI()
 	{
 		return (JobsVOImpl)findViewObject("JobsVOVI");
+	}
+
+	/**
+	 * Container's getter for RegionsVO1.
+	 * @return RegionsVO1
+	 */
+	public RegionsVOImpl getRegionsVOVI()
+	{
+		return (RegionsVOImpl)findViewObject("RegionsVOVI");
 	}
 }
 

@@ -21,11 +21,21 @@
   <ViewUsage
     Name="JobsVOVI"
     ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.JobsVO"/>
+  <ViewUsage
+    Name="RegionsVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.RegionsVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method
       Name="throwCustomJboException"
       MethodName="throwCustomJboException">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="throwCustomRuntimeException"
+      MethodName="throwCustomRuntimeException">
       <Return
         Name="_return_type_"
         Type="void"/>
