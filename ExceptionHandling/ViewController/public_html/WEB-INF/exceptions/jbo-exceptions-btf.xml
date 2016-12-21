@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="jbo-exceptions-btf">
+    <template-reference>
+      <document>/WEB-INF/templates/exception-fragment-template.xml</document>
+      <id>exception-fragment-template</id>
+    </template-reference>
     <default-activity>jboMenu</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__9">
+      <managed-bean-name>r_TaskflowExceptionHandler</managed-bean-name>
+      <managed-bean-class>be.contribute.exceptionhandling.view.exceptions.jboexceptionsbtf.TaskflowExceptionHandler</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="jboMenu">
       <page>/exceptions/jbo-exceptions-btf/jboMenu.jsff</page>
     </view>

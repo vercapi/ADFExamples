@@ -91,6 +91,21 @@ Good starting point for exception handling: [[http://www.slideshare.net/chriscmu
 ** TODO Action
 ** TODO Method call in TF
 
+   Without any exception handler these will give application exceptions. 
+
+   Implementation of an exception handler is needed.
+   - A specific one if you really want something to happen in case of an error
+   - Add a generic one that forwards the user friendly jbo message to the end user
+
+   You can enable/disable the "Exception handler" flag in the following file.
+   [[ViewController/public_html/WEB-INF/templates/exception-fragment-template.xml][exception-fragment-template.btf]]
+
+   This template has a generic exception handler
+
+   The code for the generic exception handler: [[ViewController/src/be/contribute/exceptionhandling/view/exceptions/jboexceptionsbtf/TaskflowExceptionHandler.java][TaskflowExceptionHandler.java]]
+   
+
+** TODO Via java
 
 * Translations
 * Impact of exception handlers
