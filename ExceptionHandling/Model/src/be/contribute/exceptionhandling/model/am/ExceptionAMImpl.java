@@ -8,6 +8,7 @@ import be.contribute.exceptionhandling.model.viewobjects.EmployeesJboVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.EmployeesRTVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.JobHistoryVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
+import be.contribute.exceptionhandling.model.viewobjects.LocationsVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.RegionsVOImpl;
 
 import oracle.jbo.server.ApplicationModuleImpl;
@@ -90,6 +91,15 @@ public class ExceptionAMImpl
 	public CountriesVOImpl getCountriesVOVI()
 	{
 		return (CountriesVOImpl)findViewObject("CountriesVOVI");
+	}
+
+	/**
+	 * Container's getter for LocationsVO1.
+	 * @return LocationsVO1
+	 */
+	public LocationsVOImpl getLocationsVOVI()
+	{
+		return (LocationsVOImpl)findViewObject("LocationsVOVI");
 	}
 }
 

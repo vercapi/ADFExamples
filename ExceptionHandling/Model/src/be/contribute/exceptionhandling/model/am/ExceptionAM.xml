@@ -36,6 +36,9 @@
   <ViewUsage
     Name="CountriesVOVI"
     ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.CountriesVO"/>
+  <ViewUsage
+    Name="LocationsVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.LocationsVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

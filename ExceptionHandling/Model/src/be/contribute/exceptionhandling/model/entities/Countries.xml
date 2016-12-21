@@ -57,6 +57,13 @@
     AssociationOtherEnd="be.contribute.exceptionhandling.model.entities.CountrRegFkAssoc.Countries"
     Type="be.contribute.exceptionhandling.model.entities.RegionsImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Locations"
+    Association="be.contribute.exceptionhandling.model.entities.LocCIdFkAssoc"
+    AssociationEnd="be.contribute.exceptionhandling.model.entities.LocCIdFkAssoc.Locations"
+    AssociationOtherEnd="be.contribute.exceptionhandling.model.entities.LocCIdFkAssoc.Countries"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CountryCIdPk"
     PrimaryKey="true">

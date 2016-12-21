@@ -5,6 +5,7 @@ import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 import java.math.BigDecimal;
 
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 // ---------------------------------------------------------------------
@@ -24,7 +25,8 @@ public class CountriesImpl
 		CountryId,
 		CountryName,
 		RegionId,
-		Regions;
+		Regions,
+		Locations;
 		private static AttributesEnum[] vals = null;
 		private static final int firstIndex = 0;
 
@@ -52,16 +54,26 @@ public class CountriesImpl
 			return vals;
 		}
 	}
+
 	public static final int COUNTRYID = AttributesEnum.CountryId.index();
 	public static final int COUNTRYNAME = AttributesEnum.CountryName.index();
 	public static final int REGIONID = AttributesEnum.RegionId.index();
 	public static final int REGIONS = AttributesEnum.Regions.index();
+	public static final int LOCATIONS = AttributesEnum.Locations.index();
 
 	/**
 	 * This is the default constructor (do not remove).
 	 */
 	public CountriesImpl()
 	{
+	}
+
+	/**
+	 * @return the definition object for this instance class.
+	 */
+	public static synchronized EntityDefImpl getDefinitionObject()
+	{
+		return EntityDefImpl.findDefObject("be.contribute.exceptionhandling.model.entities.Countries");
 	}
 
 	/**
@@ -137,6 +149,14 @@ public class CountriesImpl
 	}
 
 	/**
+	 * @return the associated entity oracle.jbo.RowIterator.
+	 */
+	public RowIterator getLocations()
+	{
+		return (RowIterator)getAttributeInternal(LOCATIONS);
+	}
+
+	/**
 	 * @param countryId key constituent
 
 	 * @return a Key object based on given key constituents.
@@ -146,12 +166,5 @@ public class CountriesImpl
 		return new Key(new Object[] { countryId });
 	}
 
-	/**
-	 * @return the definition object for this instance class.
-	 */
-	public static synchronized EntityDefImpl getDefinitionObject()
-	{
-		return EntityDefImpl.findDefObject("be.contribute.exceptionhandling.model.entities.Countries");
-	}
 }
 
