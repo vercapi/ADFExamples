@@ -38,6 +38,9 @@
     <view id="Success">
       <page>/exceptions/jbo-exceptions-btf/Success.jsff</page>
     </view>
+    <view id="Error">
+      <page>/exceptions/jbo-exceptions-btf/Error.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>jboMenu</from-activity-id>
       <control-flow-case id="__2">
@@ -76,7 +79,7 @@
       </control-flow-case>
       <control-flow-case id="__12">
         <from-outcome>afterException</from-outcome>
-        <to-activity-id>Success</to-activity-id>
+        <to-activity-id>Error</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

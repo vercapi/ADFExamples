@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+   <af:panelGroupLayout id="pgl1" layout="vertical">
+      <af:outputLabel id="ol1" value="Error page"/>
+      <af:button text="Back" id="b1" action="goMenu"/>
+   </af:panelGroupLayout>
+</ui:composition>

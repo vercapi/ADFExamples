@@ -10,7 +10,13 @@
       <af:outputLabel id="ol3" value="Get attribute throws jbo exception"/>
       <af:button id="b3" action="goAttributes" text="Attributes"/>
 		
-      <af:outputLabel id="ol4" value="AM client interface throws jbo exception"/>
+      <af:outputLabel id="ol4" value="AM client interface throws jbo exception in TF method call"/>
       <af:button id="b4" action="goThrowJbo" text="ThrowJbo"/>
+		
+		<af:outputLabel id="ol5" value="AM client interface throws jbo exception in action"/>
+      <af:button id="b5" action="#{bindings.throwCustomJboException.execute}" text="ThrowJbo action"/>
+		
+		<af:outputLabel id="ol6" value="AM client interface throws jbo exception in actionListener, action is goSuccess"/>
+      <af:button id="b6" action="goSuccess" actionListener="#{bindings.throwCustomJboException.execute}" text="ThrowJbo actionListener"/>
    </af:panelGroupLayout>
 </ui:composition>

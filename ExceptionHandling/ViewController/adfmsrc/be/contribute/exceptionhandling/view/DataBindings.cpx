@@ -16,6 +16,8 @@
     <page path="/exceptions/jbo-exceptions-btf/Query.jsff" usageId="be_contribute_exceptionhandling_view_QueryPageDef"/>
     <page path="/exceptions/exceptions-home-btf/Attributes.jsff"
           usageId="be_contribute_exceptionhandling_view_AttributesPageDef"/>
+    <page path="/exceptions/jbo-exceptions-btf/jboMenu.jsff"
+          usageId="be_contribute_exceptionhandling_view_jboMenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="be_contribute_exceptionhandling_view_homePageDef"
@@ -28,6 +30,7 @@
     <page id="be_contribute_exceptionhandling_view_QueryPageDef" path="exceptions.jbo_exceptions_btf.QueryPageDef"/>
     <page id="be_contribute_exceptionhandling_view_AttributesPageDef"
           path="exceptions.exceptions_home_btf.AttributesPageDef"/>
+    <page id="be_contribute_exceptionhandling_view_jboMenuPageDef" path="exceptions.jbo_exceptions_btf.jboMenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="ExceptionAMDataControl" Package="be.contribute.exceptionhandling.model.am"
