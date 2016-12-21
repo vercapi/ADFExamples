@@ -27,6 +27,12 @@
   <ViewUsage
     Name="JobHistoryVOVI"
     ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.JobHistoryVO"/>
+  <ViewUsage
+    Name="EmployeesJboVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.EmployeesJboVO"/>
+  <ViewUsage
+    Name="EmployeesRTVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.viewobjects.EmployeesRTVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

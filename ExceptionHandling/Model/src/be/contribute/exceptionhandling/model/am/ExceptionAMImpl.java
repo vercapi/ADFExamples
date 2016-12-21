@@ -3,6 +3,8 @@ package be.contribute.exceptionhandling.model.am;
 import be.contribute.exceptionhandling.model.am.common.ExceptionAM;
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 import be.contribute.exceptionhandling.model.exceptions.CustomRuntimeException;
+import be.contribute.exceptionhandling.model.viewobjects.EmployeesJboVOImpl;
+import be.contribute.exceptionhandling.model.viewobjects.EmployeesRTVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.JobHistoryVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
 import be.contribute.exceptionhandling.model.viewobjects.RegionsVOImpl;
@@ -60,6 +62,24 @@ public class ExceptionAMImpl
 	public JobHistoryVOImpl getJobHistoryVOVI()
 	{
 		return (JobHistoryVOImpl)findViewObject("JobHistoryVOVI");
+	}
+
+	/**
+	 * Container's getter for EmployeesJboVO1.
+	 * @return EmployeesJboVO1
+	 */
+	public EmployeesJboVOImpl getEmployeesJboVOVI()
+	{
+		return (EmployeesJboVOImpl)findViewObject("EmployeesJboVOVI");
+	}
+
+	/**
+	 * Container's getter for EmployeesRTVO1.
+	 * @return EmployeesRTVO1
+	 */
+	public EmployeesRTVOImpl getEmployeesRTVOVI()
+	{
+		return (EmployeesRTVOImpl)findViewObject("EmployeesRTVOVI");
 	}
 }
 
