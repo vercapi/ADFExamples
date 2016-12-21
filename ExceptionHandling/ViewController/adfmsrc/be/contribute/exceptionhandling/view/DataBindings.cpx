@@ -13,6 +13,9 @@
     <page path="/WEB-INF/exceptions/jbo-exceptions-btf.xml#jbo-exceptions-btf@CreateInsert"
           usageId="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"/>
     <page path="/home-btf/homeFragment.jsff" usageId="be_contribute_exceptionhandling_view_homeFragmentPageDef"/>
+    <page path="/exceptions/jbo-exceptions-btf/Query.jsff" usageId="be_contribute_exceptionhandling_view_QueryPageDef"/>
+    <page path="/exceptions/exceptions-home-btf/Attributes.jsff"
+          usageId="be_contribute_exceptionhandling_view_AttributesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="be_contribute_exceptionhandling_view_homePageDef"
@@ -22,6 +25,9 @@
     <page id="be_contribute_exceptionhandling_view_jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"
           path="exceptions.jbo_exceptions_btf_jbo_exceptions_btf_CreateInsertPageDef"/>
     <page id="be_contribute_exceptionhandling_view_homeFragmentPageDef" path="home_btf.homeFragmentPageDef"/>
+    <page id="be_contribute_exceptionhandling_view_QueryPageDef" path="exceptions.jbo_exceptions_btf.QueryPageDef"/>
+    <page id="be_contribute_exceptionhandling_view_AttributesPageDef"
+          path="exceptions.exceptions_home_btf.AttributesPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="ExceptionAMDataControl" Package="be.contribute.exceptionhandling.model.am"

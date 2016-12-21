@@ -8,8 +8,12 @@
     <view id="jboMenu">
       <page>/exceptions/jbo-exceptions-btf/jboMenu.jsff</page>
     </view>
-    <view id="Query"></view>
-    <view id="Attributes"></view>
+    <view id="Query">
+      <page>/exceptions/jbo-exceptions-btf/Query.jsff</page>
+    </view>
+    <view id="Attributes">
+      <page>/exceptions/exceptions-home-btf/Attributes.jsff</page>
+    </view>
     <method-call id="throwCustomJboException">
       <method>#{bindings.throwCustomJboException.execute}</method>
       <outcome>
@@ -56,6 +60,10 @@
       <control-flow-case id="__11">
         <from-outcome>goSuccess</from-outcome>
         <to-activity-id>Success</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>goMenu</from-outcome>
+        <to-activity-id>jboMenu</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
