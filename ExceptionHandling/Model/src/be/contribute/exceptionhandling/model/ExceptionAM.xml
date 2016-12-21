@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ExceptionAM"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  ComponentClass="be.contribute.exceptionhandling.model.ExceptionAMImpl"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="be.contribute.exceptionhandling.model.ExceptionAM_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="JobsVOVI"
+    ViewObjectName="be.contribute.exceptionhandling.model.JobsVO"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="be.contribute.exceptionhandling.model.ModelBundle"/>
+  </ResourceBundle>
+</AppModule>
