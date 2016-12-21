@@ -74,6 +74,10 @@
         <from-outcome>goMenu</from-outcome>
         <to-activity-id>jboMenu</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__12">
+        <from-outcome>afterException</from-outcome>
+        <to-activity-id>Success</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>

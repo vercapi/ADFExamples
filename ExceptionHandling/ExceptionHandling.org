@@ -89,7 +89,7 @@ Good starting point for exception handling: [[http://www.slideshare.net/chriscmu
 
 ** TODO ActionListener
 ** TODO Action
-** TODO Method call in TF
+** Method call in TF
 
    Without any exception handler these will give application exceptions. 
 
@@ -97,14 +97,19 @@ Good starting point for exception handling: [[http://www.slideshare.net/chriscmu
    - A specific one if you really want something to happen in case of an error
    - Add a generic one that forwards the user friendly jbo message to the end user
 
-   You can enable/disable the "Exception handler" flag in the following file.
-   [[ViewController/public_html/WEB-INF/templates/exception-fragment-template.xml][exception-fragment-template.btf]]
+*** TODO Generic exception handler
 
-   This template has a generic exception handler
+   This is the template that can be included to use a generic exception handler [[ViewController/public_html/WEB-INF/templates/exception-fragment-template.xml][exception-fragment-template.btf]]
+   You can enable/disable the "Exception handler" flag in this file to see the standard results.
+
+   The exception handler has a default outcome you can use on your main taskflow to redirect after errors.
+   This allows combination of the default 'messaging behavior' and some custom implementation.
 
    The code for the generic exception handler: [[ViewController/src/be/contribute/exceptionhandling/view/exceptions/jboexceptionsbtf/TaskflowExceptionHandler.java][TaskflowExceptionHandler.java]]
    
-
+   Issues with this:
+   - When do we log this? currently there is only the message for the user.
+   
 ** TODO Via java
 
 * Translations

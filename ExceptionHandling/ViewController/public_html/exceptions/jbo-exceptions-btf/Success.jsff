@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:outputLabel value="Successful on the other side" id="ol1"/>
+  <af:panelGroupLayout id="pgl1" layout="vertical">
+	<af:outputLabel value="Successful on the other side" id="ol1"/>
+	<af:button id="b1" text="back" action="goMenu"/>
+  </af:panelGroupLayout>
 </ui:composition>
