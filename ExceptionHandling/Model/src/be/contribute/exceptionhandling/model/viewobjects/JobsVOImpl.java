@@ -1,6 +1,7 @@
 package be.contribute.exceptionhandling.model.viewobjects;
 
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
+import be.contribute.exceptionhandling.model.viewobjects.common.JobsVO;
 
 import oracle.jbo.server.ViewObjectImpl;
 // ---------------------------------------------------------------------
@@ -11,6 +12,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---------------------------------------------------------------------
 public class JobsVOImpl
 	extends ViewObjectImpl
+	implements JobsVO
 {
 	/**
 	 * This is the default constructor (do not remove).

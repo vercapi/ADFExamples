@@ -169,7 +169,8 @@ public class JobsImpl
 	 */
 	public void remove()
 	{
-		super.remove();
+	   throw new CustomJboException("Could not remove job!");
+		//super.remove();
 	}
 
 	/**
@@ -187,7 +188,8 @@ public class JobsImpl
 	 */
 	protected void doDML(int operation, TransactionEvent e)
 	{
-		super.doDML(operation, e);
+	   throw new CustomJboException("Cannot do any DML on job!");
+		//super.doDML(operation, e);
 	}
 }
 

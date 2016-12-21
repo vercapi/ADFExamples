@@ -2,6 +2,7 @@ package be.contribute.exceptionhandling.model.viewobjects;
 
 import be.contribute.exceptionhandling.model.entities.JobsImpl;
 import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
+import be.contribute.exceptionhandling.model.viewobjects.common.JobsVORow;
 
 import oracle.jbo.server.ViewRowImpl;
 // ---------------------------------------------------------------------
@@ -12,14 +13,17 @@ import oracle.jbo.server.ViewRowImpl;
 // ---------------------------------------------------------------------
 public class JobsVORowImpl
 	extends ViewRowImpl
+	implements JobsVORow
 {
-	
+
+
+	public static final int ENTITY_JOBS = 0;
+
 	public void failOnJobRow()
 	{
 		throw new CustomJboException("Failed on JobRow");
 	}
-	
-	public static final int ENTITY_JOBS = 0;
+
 
 	/**
 	 * AttributesEnum: generated enum for identifying attributes and accessors. DO NOT MODIFY.
@@ -30,7 +34,8 @@ public class JobsVORowImpl
 		JobTitle,
 		MaxSalary,
 		MinSalary;
-		private static AttributesEnum[] vals = null;
+		static AttributesEnum[] vals = null;
+		;
 		private static final int firstIndex = 0;
 
 		public int index()
@@ -57,6 +62,8 @@ public class JobsVORowImpl
 			return vals;
 		}
 	}
+
+
 	public static final int JOBID = AttributesEnum.JobId.index();
 	public static final int JOBTITLE = AttributesEnum.JobTitle.index();
 	public static final int MAXSALARY = AttributesEnum.MaxSalary.index();

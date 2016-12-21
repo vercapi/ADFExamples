@@ -14,7 +14,11 @@
   SelectAllAttributes="false"
   RowClass="be.contribute.exceptionhandling.model.viewobjects.JobsVORowImpl"
   ComponentClass="be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentInterface="be.contribute.exceptionhandling.model.viewobjects.common.JobsVO"
+  ClientProxyName="be.contribute.exceptionhandling.model.viewobjects.client.JobsVOClient"
+  RowInterface="be.contribute.exceptionhandling.model.viewobjects.common.JobsVORow"
+  ClientRowProxyName="be.contribute.exceptionhandling.model.viewobjects.client.JobsVORowClient">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -54,6 +58,26 @@
     EntityAttrName="MinSalary"
     EntityUsage="Jobs"
     AliasName="MIN_SALARY"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="failOnJobVO"
+      MethodName="failOnJobVO">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="failOnJobRow"
+      MethodName="failOnJobRow">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientRowInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="be.contribute.exceptionhandling.model.ModelBundle"/>

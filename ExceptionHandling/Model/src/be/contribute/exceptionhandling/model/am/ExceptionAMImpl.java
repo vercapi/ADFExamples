@@ -1,5 +1,7 @@
 package be.contribute.exceptionhandling.model.am;
 
+import be.contribute.exceptionhandling.model.am.common.ExceptionAM;
+import be.contribute.exceptionhandling.model.exceptions.CustomJboException;
 import be.contribute.exceptionhandling.model.viewobjects.JobsVOImpl;
 
 import oracle.jbo.server.ApplicationModuleImpl;
@@ -11,12 +13,18 @@ import oracle.jbo.server.ApplicationModuleImpl;
 // ---------------------------------------------------------------------
 public class ExceptionAMImpl
 	extends ApplicationModuleImpl
+	implements ExceptionAM
 {
 	/**
 	 * This is the default constructor (do not remove).
 	 */
 	public ExceptionAMImpl()
 	{
+	}
+	
+	public void throwCustomJboException()
+	{
+		throw new CustomJboException("Custom JBO exception by AM");
 	}
 
 	/**
